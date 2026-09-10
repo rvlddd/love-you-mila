@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Mila ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;
+font-family:Arial,sans-serif;background:linear-gradient(135deg,#ff758c,#ff7eb3,#c471ed);color:white}
+.card{text-align:center;padding:45px 30px;border-radius:28px;background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);box-shadow:0 20px 50px rgba(0,0,0,.2);z-index:2}
+h1{font-size:42px;margin:0 0 15px;text-shadow:0 3px 10px #9d3158}
+p{font-size:22px;margin:0}.heart{font-size:70px;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.25)}} .floating{position:absolute;bottom:-50px;font-size:25px;animation:up 7s linear infinite;opacity:.8}
+@keyframes up{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="heart">❤️</div>
+<h1>Love you sayangku Mila</h1>
+<p>Selalu sayang kamu ❤️</p>
+</div>
+<script>
+const hearts=["❤️","💕","💖","💗","💘","💝"];
+setInterval(()=>{
+ const e=document.createElement("div"); e.className="floating";
+ e.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+ e.style.left=Math.random()*100+"vw";
+ e.style.animationDuration=(5+Math.random()*5)+"s";
+ document.body.appendChild(e);
+ setTimeout(()=>e.remove(),10000);
+},500);
+</script>
+</body>
+</html>
